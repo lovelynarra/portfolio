@@ -1,0 +1,15 @@
+.typing {height: 20vh; 
+  display:flex; flex-direction:column; 
+  justify-content:center; 
+  align-items:center; 
+  /*가운데정렬을 지우고 싶다면 
+  align-items:center --> align-items:flex-start */
+  align-contents:center;}
+  p.result1,p.result2{display:inline-block; font-size:22px; height:30px; line-height:30px; padding-right:2px; box-sizing:border-box; padding:0; margin:5px}
+  p.cursor {animation:cursor 0.4s infinite}
+
+ @keyframes cursor{ 
+      0% {border-right: 1px solid #fff} 
+      50% {border-right: 1px solid #000} 
+      100% {border-right: 1px solid #fff} 
+    }

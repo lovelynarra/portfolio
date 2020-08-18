@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+@media screen and (max-width:720px) {
+	/* reset */
+	* {margin:0; padding:0}
+
+	li {list-style:none}
+	a {text-decoration:none}
+	img {vertical-align:top; border:0}
+	body {font-family:'NanumSquare','Arimo'}
+	input[type=button] {-webkit-appearance:none}
+
+	/* menu */
+	#menu {font-size:10px}
+	#menu li a {color:#555}
+
+	/* section0 (intro) */ 
+	#section0 .text1 {text-align:center; letter-spacing:3px; color:#666; font-size:16px; padding-top:150px}
+	#section0 .text2 {text-align:center; font-size:60px; font-weight:bold; letter-spacing:10px; color:#eeebdf; text-shadow:2px 2px 2px #666; margin-top:50px}
+	#section0 .text3 {text-align:center; font-size:60px; font-weight:bold; letter-spacing:10px; margin-bottom:40px; color:#666}
+	#section0 .typing {color:#666}
+	#section0 .typing p {font-size:14px}
+	
+	/* section2 (about) */
+	#section2 {position:relative}
+	#section2 .text_arc > span {position:absolute; font-size:22px; color:#89B8E2; opacity:0.8; text-shadow:1px 1px 1px gray; font-weight:bold}
+	.char1 {transform: rotate(-28deg); left:120px; top:80px}
+	.char2 {transform: rotate(-20deg); left:150px; top:65px}
+	.char3 {transform: rotate(0deg); left:180px; top:60px}
+	.char4 {transform: rotate(15deg); left:210px; top:65px}
+	.char5 {transform: rotate(30deg); left:240px; top:80px}
+	
+	#section2 .profile img {position:absolute; left:115px; top:90px; width:150px; height:150px; border-radius:100%}
+	#section2 .profile img.profile_hover_img {display:none}
+	#section2 .profile_txt {position:absolute; left:95px; top:260px}
+	#section2 .profile_txt p {margin-bottom:10px; color:#666; font-size:14px}
+	#section2 .profile_txt span {font-size:12px; color:#aaa}
+	#section2 button {display:none}
+	#section2 .progress_bar {position:absolute; left:35px; top:380px}
+	#section2 .progress_bar .subject {font-weight:bold; font-size:10px}
+	#section2 .progress_bar .pro {margin-bottom:0; width:330px}
+	#section2 .progress_bar .progress {height:15px}
+	#section2 .progress_bar .bar {height:12px}
+	#section2 .progress_bar .bar_txt {display:none}
+
+	/* section1 (portfolio) */
+	.fp-controlArrow.fp-prev, .fp-controlArrow.fp-next{opacity:0.5}
+	#section1 #slide1 {position:relative}
+	#section1 #slide1 .slide1_box {position:absolute; left:-10px; top:50px; width:350px; height:auto; color:#666; text-align:left}
+	#section1 #slide1 .slide1_box p:nth-child(1) {font-size:25px; font-weight:bold; text-indent:50px; margin-top:45px}
+	#section1 #slide1 .slide1_box p span {display:none}
+	#section1 #slide1 .slide1_box p:nth-child(2) {font-size:16px; text-indent:50px; margin-top:10px}
+	#section1 #slide1 .slide1_box p:nth-child(3) {font-size:10px; text-indent:50px; margin-top:15px; color:#888}
+	#section1 #slide1 .slide1_box p:nth-child(4) {font-size:10px; text-indent:50px; margin-top:10px; color:#888}
+	#section1 #slide1 .slide1_box p:nth-child(4) span {font-size:10px; font-weight:normal}
+	#section1 #slide1 .slide1_img img:nth-child(1) {position:absolute; left:20px; top:230px; width:250px; height:200px;}
+	#section1 #slide1 .slide1_img img:nth-child(2) {position:absolute; right:20px; top:370px; width:200px; height:150px;}
+	#section1 #slide1 .slide1_box input {width:100px; height:40px; border:0px; box-shadow:2px 2px 2px rgba(0,0,0,0.2); background-color:rgba(0,0,0,0.2); font-size:12px}
+	#section1 #slide1 .slide1_box input.main_btn {position:absolute; left:150px; top:525px}
+	#section1 #slide1 .slide1_box input.sub1_btn {display:none}
+	#section1 #slide1 .slide1_box input.sub2_btn {display:none}
+	#section1 #slide1 .slide1_box input.sub3_btn {display:none}
+	#section1 #slide1 .slide1_box input.sub4_btn {display:none}
+	#section1 #slide1 .slide1_box input.sub5_btn {display:none}
+	#section1 #slide1 .slide1_box input.sub6_btn {display:none}
+	#section1 #slide1 .slide1_box input.sub7_btn {display:none}
+	#section1 #slide1 .slide1_box input.sub8_btn {display:none}
+	#section1 #slide1 .slide1_box input.sub9_btn {display:none}
+	#section1 #slide1 .slide1_box input:hover {background-color:#0C4DA2; font-weight:bold}
+
+	#section1 #slide2 {position:relative}
+	#section1 #slide2 .slide2_img img {width:80px; height:150px}
+	#section1 #slide2 .slide2_img img:nth-child(1) {position:absolute; left:20px; bottom:220px; z-index:50}
+	#section1 #slide2 .slide2_img img:nth-child(2) {position:absolute; left:80px; bottom:260px; z-index:40}
+	#section1 #slide2 .slide2_img img:nth-child(3) {position:absolute; left:150px; bottom:220px; z-index:30}
+	#section1 #slide2 .slide2_img img:nth-child(4) {position:absolute; left:210px; bottom:260px; z-index:40}
+	#section1 #slide2 .slide2_img img:nth-child(5) {position:absolute; left:280px; bottom:220px; z-index:30}
+	#section1 #slide2 .slide2_img img:nth-child(5):hover {z-index:50}
+	#section1 #slide2 .slide2_box {position:absolute; left:-10px; top:50px; width:350px; height:auto; color:#666; text-align:left}
+	#section1 #slide2 .slide2_box p:nth-child(1) {font-size:25px; font-weight:bold; text-indent:50px; margin-top:45px}
+	#section1 #slide2 .slide2_box p:nth-child(1) span {display:none}
+	#section1 #slide2 .slide2_box p:nth-child(2) {font-size:16px; text-indent:50px; margin-top:10px}
+	#section1 #slide2 .slide2_box p:nth-child(3) {font-size:10px; text-indent:50px; margin-top:15px; color:#888}
+	#section1 #slide2 .slide2_box p:nth-child(4) {font-size:10px; text-indent:50px; margin-top:10px; color:#888}
+	#section1 #slide2 .slide2_box input {width:100px; height:40px; border:0px; box-shadow:2px 2px 2px rgba(0,0,0,0.2); background-color:rgba(0,0,0,0.2); font-size:12px}
+	#section1 #slide2 .slide2_box input:hover {background-color:#FAD000; font-weight:bold}
+	#section1 #slide2 .slide2_box input.main_btn {position:absolute; left:40px; top:450px}
+	#section1 #slide2 .slide2_box input.sub1_btn {position:absolute; left:150px; top:450px}
+	#section1 #slide2 .slide2_box input.sub2_btn {position:absolute; left:260px; top:450px}
+	#section1 #slide2 .slide2_box input.sub3_btn {position:absolute; left:100px; top:510px}
+	#section1 #slide2 .slide2_box input.sub4_btn {position:absolute; left:210px; top:510px}
+
+	#section1 #slide3 {position:relative}
+	#section1 #slide3 .slide3_img img:nth-child(1) {width:200px; height:150px; position:absolute; left:-250px; top:200px; z-index:30}
+	#section1 #slide3 .slide3_img img:nth-child(2) {width:100px; position:absolute; left:-30px; top:280px; z-index:40}
+	#section1 #slide3 .slide3_img img:nth-child(3) {width:50px; height:90px; position:absolute; left:-90px; top:320px; z-index:50}
+	#section1 #slide3 .slide3_box {position:absolute; left:-10px; top:50px; width:350px; height:auto; color:#666; text-align:left}
+	#section1 #slide3 .slide3_box p:nth-child(1) {font-size:25px; font-weight:bold; text-indent:50px; margin-top:45px}
+	#section1 #slide3 .slide3_box p:nth-child(1) span {display:none}
+	#section1 #slide3 .slide3_box p:nth-child(2) {font-size:16px; text-indent:50px; margin-top:10px}
+	#section1 #slide3 .slide3_box p:nth-child(3) {font-size:10px; text-indent:50px; margin-top:15px; color:#888}
+	#section1 #slide3 .slide3_box input {width:100px; height:40px; border:0px; box-shadow:2px 2px 2px rgba(0,0,0,0.2); background-color:rgba(0,0,0,0.2); font-size:12px}
+	#section1 #slide3 .slide3_box input:hover {background-color:#e86000; font-weight:bold}
+	#section1 #slide3 .slide3_box input.web {position:absolute; left:145px; top:400px}
+	#section1 #slide3 .slide3_box input.tablet {position:absolute; left:145px; top:460px}
+	#section1 #slide3 .slide3_box input.mobile {position:absolute; left:145px; top:520px}
+
+	/* section3 (contact) */
+	#section3 {position:relative}
+	#section3 .contact_txt span {position:absolute; right:30px; top:75px; color:#eeebdf; font-size:20px}
+	#section3 .contact {width:300px; height:150px ;position:absolute; right:45px; bottom:80px}
+	#section3 div {text-align:left; height:30px; padding:8px} 
+	#section3 span {font-size:16px; font-weight:bold; color:#666; letter-spacing:2px}
+	#section3 .mail span {position:absolute; left:45px; top:17px; line-height:30px; margin-left:15px}
+	#section3 .mail img {width:30px}
+	#section3 .call span {line-height:30px; margin-left:15px}
+	#section3 .call img {width:30px}
+	#section3 .talk {height:30px}
+	#section3 .talk span {height:30px; line-height:30px; margin-left:15px}
+	#section3 .talk img {width:30px; margin-top:0}
+	#section3 .talk span a {position:absolute; left:55px; top:108px; font-size:12px; color:#666; margin-left:0}
+	#section3 .talk span a:hover {color:#523E34; font-weight:bold}
+	#section3 .loca span {line-height:30px; margin-left:15px}
+	#section3 .loca img {width:30px}
+	#section3 span > img {display:none}
+	#section3 .right {position:absolute; left:70px; bottom:10px; width:230px; height:30px; line-height:30px;}
+	#section3 .right p {margin-bottom:0; font-size:10px; letter-spacing:2px; color:#666}
+	#section3 .right p.right2 {display:none}
+	#section3 .contact_box {position: relative;  width:250px; height:150px; border:7px solid #C5C5C5; z-index:20; padding:0; box-shadow:7px 7px 7px rgba(0,0,0,0.2); border-radius:20px; animation-timing-function:ease}
+	@keyframes contactMove {
+		from {left:0px; top:0px}
+		to {left:70px; top:-150px}
+	}
+	#section3 .contact_box2 {position:absolute; left:30px; top:230px; width:250px; height:150px; z-index:10; border:7px solid #eeebdf; padding:0; box-shadow:7px 7px 7px rgba(0,0,0,0.2); border-radius:20px}
+	#section3 .contact_box img, .contact_box2 img {width:100%; height:100%; border-radius:10px}
+	#section3 img.hover {display:none}
+
+
+@media screen and (min-width:1024px) {
+
+}

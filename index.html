@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Nara's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Lim nara web publisher Portfolio Site." />
+    <meta name="keywords"  content="web publisher UX/UI Designer Portfolio" />
+    <meta name="author" content="Lim nara">
+    
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/respond.css">
+    <link rel="stylesheet" type="text/css" href="css/typing.css" />
+    <link rel="stylesheet" type="text/css" href="css/progress_bar.css" />
+    <link rel="stylesheet" href="css/button.css">
+    
+    <!--[if IE]>
+      <script type="text/javascript">
+        var console = { log: function() {} };
+      </script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="script/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="script/examples.js"></script>
+    <script src="script/typing.js"></script>
+    <script src="script/progress_bar.js"></script>
+ 
+    <script type="text/javascript">
+     // 화면 전환 후 실행
+     function afterLoadEx(origin, destination, direction) {
+      console.log("afterLoadEx [현재화면명:" + origin + "][현재화면번호:" + destination + "][이동방향:" + direction + "]");
+      switch (destination) {
+       case 1 : // 1번째 화면
+            
+        break;
+       case 2 : // 2번째 화면
+        $.each($(".progress_bar .pro"), function(idx, item) {
+         fillPrgBar(item.id); // progress0
+        });
+        break;
+       case 3 : // 3번째 화면
+        
+        break;
+       case 4 : // 4번째 화면
+        $('#section3 .contact_box').css("animation", "contactMove 1.5s");
+        $('#section3 .contact_box').css("animation-fill-mode", "forwards");
+        break;
+       }
+     }
+
+     // 화면이 전환 되기 전 실행
+     function onLeaveEx(origin, destination, direction) {
+      console.log("onLeaveEx [현재화면번호:" + origin + "][다음화면번호:" + destination + "][이동방향:" + direction + "]");
+      switch (origin) { 
+       case 1 : // 1번째 화면
+        
+        break;
+       case 2 : // 2번째 화면
+        $.each($(".progress_bar .pro"), function(idx, item) {
+         emptyPrgBar(item.id); // progress0
+        });
+        break;
+       case 3 : // 3번째 화면
+        
+        break;
+       case 4 : // 4번째 화면
+        $('#section3 .contact_box').css("animation", "");
+        break;
+      }
+     }
+
+     $(document).ready(function() {
+      $('#fullpage').fullpage({
+       sectionsColor: ['#C5C5C5', '#EFF0EB', '#E3CAB6', '#A8BCBD']
+       , anchors    : ['firstPage', 'secondPage', '3rdPage', '4thpage']
+       , menu       : '#menu'
+       , afterLoad  : afterLoadEx 
+       , onLeave    : onLeaveEx 
+      });
+     });
+    </script>
+</head>
+<body>
+    <ul id="menu">
+      <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Intro</a></li>
+      <li data-menuanchor="secondPage"><a href="#secondPage">About</a></li>
+      <li data-menuanchor="3rdPage"><a href="#3rdPage">Portfolio</a></li>
+      <li data-menuanchor="4thpage"><a href="#4thpage">Contact</a></li>
+    </ul>
+  <div id="fullpage">
+    <div class="section active" id="section0">
+      <p class="text1">Web publisher & UX / UI Designer</p>
+      <p class="text2">Nara's</p>
+      <p class="text3">Portfolio</p>
+      <div class="typing">
+        <p class="result1"></p>
+        <p class="result2"></p>
+      </div>
+    </div> <!-- section0 -->
+    <div class="section" id="section2">
+      <div class="profile">
+        <div class="text_arc">
+          <span class="char1">A</span>
+          <span class="char2">b</span>
+          <span class="char3">o</span>
+          <span class="char4">u</span>
+          <span class="char5">t</span>
+        </div>
+        <img class="profile_img" src="img/profile.jpg" alt="프로필 사진">
+        <img class="profile_hover_img" src="img/profile_hover.png" alt="호버 시 프로필 사진">
+        <div class="profile_txt">
+          <p class="name">Name : <em>임나라</em> <span>Lim nara</span></p>
+          <p class="birth">Birth : <em>1997 / 10 / 04</em></p>
+          <p class="major">Major : <em>패션디자인</em> <span>Fashion Design</span></p>
+          <p class="license">License : <em>웹디자인기능사</em> <span>(실기 9월)</span></p>
+        </div> <!-- profile_txt -->
+        <button class="learn-more" onclick="location.href='#4thpage'">
+          <span class="c">C</span>
+          <span class="o">o</span>
+          <span class="n">n</span>
+          <span class="t">t</span>
+          <span class="a">a</span>
+          <span class="c2">c</span>
+          <span class="t2">t</span>
+          &nbsp;
+          <span class="m">m</span>
+          <span class="e">e</span>
+        </button>
+      </div> <!-- profile -->
+      <div class="progress_bar">
+        <div id="progress0" class="pro">
+          <div class="subject">HTML</div>
+          <div class="progress"><span class="bar"></span></div>
+          <div class="bar_txt" data-value="90"></div>
+       </div> <!-- progress0 -->
+       <div id="progress1" class="pro">
+          <div class="subject">CSS</div>
+          <div class="progress"><span class="bar"></span></div>
+          <div class="bar_txt" data-value="90"></div>
+       </div> <!-- progress1 -->
+       <div id="progress2" class="pro">
+          <div class="subject">javascipt</div>
+          <div class="progress"><span class="bar"></span></div>
+          <div class="bar_txt" data-value="70"></div>
+       </div> <!-- progress2 -->
+        <div id="progress3" class="pro">
+          <div class="subject">jQuery</div>
+          <div class="progress"><span class="bar"></span></div>
+          <div class="bar_txt" data-value="70"></div>
+       </div> <!-- progress3 -->
+       <div id="progress4" class="pro">
+        <div class="subject">Vue</div>
+        <div class="progress"><span class="bar"></span></div>
+        <div class="bar_txt" data-value="70"></div>
+     </div> <!-- progress3 -->
+      </div> <!-- progress_bar -->
+    </div> <!-- section2 -->  
+    <div class="section" id="section1">
+      <div class="slide" id="slide1">
+        <div class="slide1_img">
+          <img src="img/i8151.png" alt="독립기념관">
+          <img src="img/i8152.png" alt="독립기념관">
+        </div>
+        <div class="slide1_box">
+          <p>독립기념관<span>THE INDEPENDENCE HALL OF KOREA</span></p>
+          <p>Web Site</p>
+          <p>디자인 100% / 퍼블리싱 100%</p>
+          <p>공기관 웹 사이트 리뉴얼<span>(main page에서 빨간색 글씨는 완성된 sub page 입니다.)</span></p>
+          <input class="main_btn on" type="button" value="main page" onClick="window.open('http://narrra.dothome.co.kr/i815')">
+          <input class="sub1_btn" type="button" value="sub page①" onClick="window.open('http://narrra.dothome.co.kr/i815/sub3.html')">
+          <input class="sub2_btn" type="button" value="sub page②" onClick="window.open('http://narrra.dothome.co.kr/i815/sub4.html')">
+          <input class="sub3_btn" type="button" value="sub page③" onClick="window.open('http://narrra.dothome.co.kr/i815/sub1.html')">
+          <input class="sub4_btn" type="button" value="sub page④" onClick="window.open('http://narrra.dothome.co.kr/i815/sub5.html')">
+          <input class="sub5_btn" type="button" value="sub page⑤" onClick="window.open('http://narrra.dothome.co.kr/i815/sub2.html')">
+          <input class="sub6_btn" type="button" value="sub page⑥" onClick="window.open('http://narrra.dothome.co.kr/i815/sub7.html')">
+          <input class="sub7_btn" type="button" value="sub page⑦" onClick="window.open('http://narrra.dothome.co.kr/i815/sub6.html')">
+          <input class="sub8_btn" type="button" value="login" onClick="window.open('http://narrra.dothome.co.kr/i815/login.html')">
+          <input class="sub9_btn" type="button" value="join" onClick="window.open('http://narrra.dothome.co.kr/i815/join.html')">
+        </div>
+      </div> <!-- slide1 -->
+      <div class="slide" id="slide2">
+        <div class="slide2_img">
+          <img src="img/megacoffee1.png" alt="메가커피">
+          <img src="img/megacoffee2.png" alt="메가커피">
+          <img src="img/megacoffee3.png" alt="메가커피">
+          <img src="img/megacoffee4.png" alt="메가커피">
+          <img src="img/megacoffee5.png" alt="메가커피">
+        </div>
+        <div class="slide2_box">
+          <p>메가커피<span>&nbsp; MegaCoffee</span></p>
+          <p>Mobile Site</p>
+          <p>디자인 100% / 퍼블리싱 100%</p>
+          <p>팀 프로젝트 ('franchise' , 'search' , 'service' , 'join2' 제작)</p>
+          <input class="main_btn on" type="button" value="main page" onClick="window.open('http://narrra.dothome.co.kr/megacoffee', '메가커피', 'width=400,height=1080')">
+          <input class="sub1_btn" type="button" value="sub page①" onClick="window.open('http://narrra.dothome.co.kr/megacoffee/franchise.html', '메가커피', 'width=400,height=1080')">
+          <input class="sub2_btn" type="button" value="sub page②" onClick="window.open('http://narrra.dothome.co.kr/megacoffee/join2.html', '메가커피', 'width=400,height=1080')">
+          <input class="sub3_btn" type="button" value="sub page③" onClick="window.open('http://narrra.dothome.co.kr/megacoffee/search.html', '메가커피', 'width=400,height=1080')">
+          <input class="sub4_btn" type="button" value="sub page④" onClick="window.open('http://narrra.dothome.co.kr/megacoffee/service.html', '메가커피', 'width=400,height=1080')">
+        </div>
+      </div> <!-- slide2 -->
+      <div class="slide" id="slide3">
+        <div class="slide3_img">
+          <img src="img/samyang2.png" alt="삼양">
+          <img src="img/samyang3.png" alt="삼양">
+          <img src="img/samyang1.png" alt="삼양">
+        </div>
+        <div class="slide3_box">
+          <p>삼양식품<span>&nbsp; Samyang</span></p>
+          <p>Responsive web site</p>
+          <p>디자인 100% / 퍼블리싱 100%</p>
+          <input class="web on" type="button" value="Web(PC)" onClick="window.open('http://narrra.dothome.co.kr/samyang', '삼양식품', 'width=2000,height=1080')">
+          <input class="tablet" type="button" value="Tablet" onClick="window.open('http://narrra.dothome.co.kr/samyang', '삼양식품', 'width=900,height=1080')">
+          <input class="mobile" type="button" value="Mobile" onClick="window.open('http://narrra.dothome.co.kr/samyang', '삼양식품', 'width=400,height=1080')">
+        </div>
+      </div> <!-- slide3 -->
+      <div class="slide" id="slide4">
+        <h1>portfolio 4</h1>
+        
+      </div> <!-- slide4 -->
+    </div> <!-- section1 -->
+    <div class="section" id="section3">
+      <div class="contact_txt">
+        <span>Contact me :)</span>
+      </div>
+      <div class="contact">
+        <div class="mail"><img src="img/icons8-envelope-50.png" alt="mail"><span>skfk06130613@gmail.com</span></div>
+        <div class="call"><img src="img/icons8-phone-50.png" alt="call"><span>010-4126-6780</span></div>
+        <div class="talk">
+          <img src="img/icons8-speech-50.png" alt="talk">
+          <span>
+            <img src="img/KakaoTalk.png" alt="KakaoTalk">
+            <a href="https://open.kakao.com/o/sTwDpNnc">https://open.kakao.com/o/sTwDpNnc</a>
+          </span>
+        </div>
+        <div class="loca"><img src="img/icons8-map-pin-50.png" alt="location"><span>서울특별시 은평구 응암동</span></div>
+      </div>
+      <div class="right">
+        <p>&copy; 2020 narrra All rights reserved.</p>
+        <p class="right2">본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.</p>
+      </div>
+      <div class="contact_box">
+        <img src="img/coding_frame.gif" alt="coding img" data-animated="img/coding.gif" data-static="img/coding_frame.gif" class="hov-anim">
+      </div>
+      <div class="contact_box2">
+        <img src="img/coding2_frame.gif" alt="coding img" data-animated="img/coding2.gif" data-static="img/coding2_frame.gif" class="hov-anim">
+      </div>
+      <img class="hover" src="img/hover.png" alt="hover">
+    </div> <!-- section3 -->  
+  </div> <!-- fullpage -->
+  <script>
+    // About => contact me 버튼 css
+    $('button.learn-more').mouseenter(function(){
+      $('img.profile_img').css('display','none');
+      $('img.profile_hover_img').css('display','block');
+      $('.text_arc span').css('color','#B69DCE');
+			return false; 
+    });
+    $('button.learn-more').mouseleave(function(){
+      $('img.profile_img').css('display','block');
+      $('img.profile_hover_img').css('display','none');
+      $('.text_arc span').css('color','#89B8E2');
+			return false; 
+		}); 
+
+    // Contact 이미지 호버 시 animate
+    $(".hov-anim").mouseover(function() {
+      $(this).attr("src", $(this).data("animated"));
+    }),
+    $(".hov-anim").mouseout(function() {
+      $(this).attr("src", $(this).data("static"))
+    });
+
+    // Portfolio input button css 
+    $('.slide1_box input').hover(function(){
+      $('.slide1_box input.on').removeClass('on');
+      return false; 
+    });
+    $('.slide2_box input').hover(function(){
+      $('.slide2_box input.on').removeClass('on');
+      return false; 
+    });
+    $('.slide3_box input').hover(function(){
+      $('.slide3_box input.on').removeClass('on');
+      return false; 
+    });
+  </script>
+  </body>
+</html>

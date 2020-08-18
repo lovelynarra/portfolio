@@ -1,0 +1,10 @@
+.pro {overflow:hidden; margin-bottom:15px}
+.pro .subject {float:left; width:80px; height:25px; line-height:25px}
+.pro .progress {float:left; width:300px; height:25px; background:#eee; border:2px solid #ccc; position:relative; border-radius:10px}
+.pro .progress .bar {display:block; position:absolute; left:0; top:2px; height:21px; width:0; border-radius:10px}
+.pro:nth-child(1) .progress .bar {background:#eb8b75}
+.pro:nth-child(2) .progress .bar {background:#e8b98f}
+.pro:nth-child(3) .progress .bar {background:#dee0bb}
+.pro:nth-child(4) .progress .bar {background:#8dc481}
+.pro:nth-child(5) .progress .bar {background:#dc6f74}
+.pro .bar_txt {float:left; height:25px; line-height:25px; margin-left:16px}
